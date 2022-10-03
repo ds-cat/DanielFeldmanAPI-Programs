@@ -30,7 +30,7 @@ for line in input_lines:
 		payload = "text=" + line
 		headers = {
 			"content-type": "application/x-www-form-urlencoded",
-			"X-RapidAPI-Key": "4a4af92182mshf92efd60ccdae50p1c8d0cjsnd62da1d35446",
+			"X-RapidAPI-Key": ,
 			"X-RapidAPI-Host": "text-sentiment.p.rapidapi.com"
 		}
 

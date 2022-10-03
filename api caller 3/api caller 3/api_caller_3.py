@@ -34,7 +34,7 @@ for line in input_lines:
 		headers = {
 			"content-type": "application/json",
 			"Accept": "application/json",
-			"X-RapidAPI-Key": "4a4af92182mshf92efd60ccdae50p1c8d0cjsnd62da1d35446",
+			"X-RapidAPI-Key": ,
 			"X-RapidAPI-Host": "sentiment-analysis9.p.rapidapi.com"
 		}
 
