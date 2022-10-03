@@ -1,0 +1,64 @@
+﻿  csv api.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(224,1): warning C4267: 'initializing': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(223): message : see reference to function template instantiation '_Ty *std::construct_at<_Ty,unsigned __int64&,void>(_Ty *const ,unsigned __int64 &) noexcept(<expr>)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(829): message : see reference to function template instantiation 'void std::_Construct_in_place<int,unsigned __int64&>(_Ty &,unsigned __int64 &) noexcept' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(816): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<unsigned __int64&>(unsigned __int64 &)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(822): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<unsigned __int64&>(unsigned __int64 &)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(902): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<unsigned __int64&>(unsigned __int64 &)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(904): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<unsigned __int64&>(unsigned __int64 &)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\pugsl\source\repos\csv api\csv api\csv api.cpp(55): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::emplace_back<unsigned __int64&>(unsigned __int64 &)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(231,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xmemory(675,1): warning C4267: 'initializing': conversion from 'size_t' to '_Objty', possible loss of data
+          with
+          [
+              _Objty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(852): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,unsigned __int64&>(_Alloc &,_Objty *const ,unsigned __int64 &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<int>,
+              _Ty=int,
+              _Objty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(876): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,unsigned __int64&>(_Alloc &,_Objty *const ,unsigned __int64 &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<int>,
+              _Ty=int,
+              _Objty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(816): message : see reference to function template instantiation 'int *std::vector<int,std::allocator<int>>::_Emplace_reallocate<unsigned __int64&>(int *const ,unsigned __int64 &)' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(825): message : see reference to function template instantiation 'int *std::vector<int,std::allocator<int>>::_Emplace_reallocate<unsigned __int64&>(int *const ,unsigned __int64 &)' being compiled
+  csv api.vcxproj -> C:\Users\pugsl\source\repos\csv api\x64\Debug\csv api.exe
