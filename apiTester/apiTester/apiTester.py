@@ -16,6 +16,7 @@ import csv
 from pickle import APPEND
 import random as rand
 import math
+from sqlite3 import apilevel
 z = 0
 y= 0
 averageOver = 0
@@ -25,11 +26,12 @@ averageOverSRS = 0
 averageOverSRS2 = 0
 averageOverSRS3 = 0
 
-run_size = 1000
+run_size = 500
 k = '-6'
 inputfilename = 'clustered_sentances' + k +'.csv'
 #
 while z< run_size:
+    
     with open(inputfilename,encoding='utf-8') as csvfile:
         clustered = csv.reader(csvfile)
     #from csv:
@@ -57,21 +59,21 @@ while z< run_size:
                 cluster_propotion[y] = cluster_propotion[y]-1
                 temp = temp - 1
         csvfile.close()
-       
+        
         #randomly select inputs from clusters
         i = 0
         n = 0
         for x in cluster_propotion:
             while i < x:
                 temp = rand.randint(0, len(templist)-1)
+
                 if(int(templist[temp]) == n):
                     if(list_of_ids.count(temp) < 1):
                         list_of_ids.append(temp)
                         i = i+1
             i = 0
             n = n + 1
-
-                
+ 
  
     API_1_Accuracy_GT = 0
     API_2_Accuracy_GT = 0
@@ -87,6 +89,7 @@ while z< run_size:
     API_1_Accuracy_CLUST = 0
     API_2_Accuracy_CLUST = 0
     API_3_Accuracy_CLUST = 0
+    missed = 0
     #from second csv:
     with open('dataset_results.csv',encoding='utf-8') as csvfile:
         dataset = csv.reader(csvfile)
@@ -101,6 +104,7 @@ while z< run_size:
                     API_2_Called = API_2_Called + 1
                 if row[4] == row[1]:
                     API_3_Called = API_3_Called + 1
+
         API_1_Accuracy_GT = API_1_Called/i
         API_2_Accuracy_GT = API_2_Called/i
         API_3_Accuracy_GT = API_3_Called/i
@@ -112,12 +116,14 @@ while z< run_size:
         API_2_Called = 0
         API_3_Called = 0
         SRS_list = []
-        while (len(SRS_list) < int(sample_size)):
+       
+        while (len(SRS_list) <  (1+int(sample_size))):
             temp = rand.randint(0, len(SRS_list))
             if(SRS_list.count(temp) < 1):
                 SRS_list.append(temp)
         i = 0
         n = 0
+        missed = 0
         for row in dataset1:
             if(row != []):
                 i = i + 1
@@ -129,9 +135,16 @@ while z< run_size:
                         API_2_Called = API_2_Called + 1
                     if row[4] == row[1]:
                         API_3_Called = API_3_Called + 1
+
+
+                        
         API_1_Accuracy_SRS = API_1_Called/n
+        #print(API_1_Called)
         API_2_Accuracy_SRS = API_2_Called/n
+        #print(API_2_Called)
         API_3_Accuracy_SRS = API_3_Called/n
+        #print(API_3_Called)
+        #print("ding")
     csvfile.close()
     with open('dataset_results.csv',encoding='utf-8') as csvfile:
         dataset2 = csv.reader(csvfile)
@@ -155,6 +168,12 @@ while z< run_size:
         API_1_Accuracy_CLUST = API_1_Called/n
         API_2_Accuracy_CLUST = API_2_Called/n
         API_3_Accuracy_CLUST = API_3_Called/n
+        #print(API_1_Called)
+        #print(API_2_Accuracy_GT)
+        #print(API_3_Called)
+        #print(abs(API_2_Accuracy_CLUST-API_2_Accuracy_GT)-abs(API_2_Accuracy_CLUST-API_2_Accuracy_SRS))
+                
+    
     csvfile.close()
     #save results to txt
     #print("GROUND TRUTH ACCURACY API 1: ",API_1_Accuracy_GT)

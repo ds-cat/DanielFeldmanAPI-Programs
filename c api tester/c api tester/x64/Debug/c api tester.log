@@ -1,0 +1,18 @@
+﻿  c api tester.cpp
+C:\Users\pugsl\source\repos\c api tester\c api tester\c api tester.cpp(74,32): warning C4244: 'argument': conversion from '__int64' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\pugsl\source\repos\c api tester\c api tester\c api tester.cpp(217,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\pugsl\source\repos\c api tester\c api tester\c api tester.cpp(282,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(2973,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\pugsl\source\repos\c api tester\c api tester\c api tester.cpp(90): message : see reference to function template instantiation '_OutIt std::transform<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,Cluster_Samples_ID::<lambda_1>>(const _InIt,const _InIt,_OutIt,_Fn)' being compiled
+          with
+          [
+              _OutIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<int>>>,
+              _Ty=int,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<int>>>,
+              _Fn=Cluster_Samples_ID::<lambda_1>
+          ]
+  c api tester.vcxproj -> C:\Users\pugsl\source\repos\c api tester\x64\Debug\c api tester.exe
